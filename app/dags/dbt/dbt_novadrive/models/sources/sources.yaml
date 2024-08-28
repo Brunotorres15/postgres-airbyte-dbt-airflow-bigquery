@@ -1,0 +1,32 @@
+version: 2
+
+sources:
+  - name: novadrive_bronze
+    database: # your gcp bigquery database
+
+    tables:
+        - name: bronze_cidades
+        - name: bronze_clientes
+        - name: bronze_compradores
+        - name: bronze_concessionarias
+        - name: bronze_estados
+        - name: bronze_fluxo
+        - name: bronze_op_faturamento
+        - name: bronze_veiculos
+        - name: bronze_vendas
+        - name: bronze_vendedores 
+  
+  - name: novadrive_silver
+    database: # your gcp bigquery database 
+
+    tables:
+        - name: silver_cidades
+        - name: silver_clientes
+        - name: silver_compradores
+        - name: silver_concessionarias
+        - name: silver_estados
+        - name: silver_fluxo
+        - name: silver_op_faturamento
+        - name: silver_veiculos
+        - name: silver_vendas
+        - name: silver_vendedores 

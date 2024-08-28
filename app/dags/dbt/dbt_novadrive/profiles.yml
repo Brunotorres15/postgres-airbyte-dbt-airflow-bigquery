@@ -1,0 +1,10 @@
+dbt_novadrive:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: # your gcp project
+      dataset: novadrive
+      threads: 2 # Must be a value of 1 or greater
+      keyfile: # Path to your gcp service_account.json

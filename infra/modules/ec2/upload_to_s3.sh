@@ -1,0 +1,1 @@
+aws s3 cp ../app s3://novadrive-airflow-dbt-bucket/ --recursive

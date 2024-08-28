@@ -1,0 +1,9 @@
+version: '3'
+services:
+  webserver:
+    environment:
+      - DB_HOST=${DB_HOST}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+    ports:
+      - "0.0.0.0:8080:8080"
