@@ -13,9 +13,8 @@ Aqui está o índice replicado para os outros tópicos:
 1. **[Project Overview](#project-overview)**  
    1.1 **[Introduction](#introduction)**  
    1.2 **[Objectives](#objectives)**  
-   1.3 **[Data Flow Architecture](#data-flow-architecture)**  
+   1.3 **[Flow of the Architecture](#data-flow-architecture)**  
    1.4 **[Technologies Used](#technologies-used)**  
-   1.5 **[Setup and Configuration](#setup-and-configuration)**
 
 2. **[Setup and Configuration](#setup-and-configuration)**  
    2.1 **[Prerequisites](#prerequisites)**  
@@ -53,7 +52,7 @@ Aqui está o índice replicado para os outros tópicos:
 * Transform raw data into structured data using DBT.
 * Manage and orchestrate the entire data pipeline using Airflow.
 
-#### Data Flow Architecture
+#### Flow of the Architecture
 
 * **Bronze Layer**: Managed by **Airbyte**, this layer ingests raw data from the Postgres database into **BigQuery**.
 * **Silver Layer**: Managed by **DBT**, this layer cleans and standardizes the data from the **bronze layer**.
