@@ -24,9 +24,11 @@ Aqui está o índice replicado para os outros tópicos:
    2.4 **[Airflow DAG Setup](#airflow-dag-setup)**
 
 3. **[Data Pipeline Explanation](#data-pipeline-explanation)**  
-   3.1 **[Source Data Ingestion with Airbyte](#source-data-ingestion-with-airbyte)**  
-   3.2 **[Data Transformation with DBT](#data-transformation-with-dbt)**  
-   3.3 **[Orchestration with Airflow](#orchestration-with-airflow)**
+   3.1 **[Medallion Architecture in BigQuery](#medallion-architecture-in-bigquery)**  
+   3.2 **[Git and GitHub for Version Control](#git-and-github-for-version-control)**  
+   3.3 **[Source Data Ingestion with Airbyte](#source-data-ingestion-with-airbyte)**  
+   3.4 **[Data Transformation with DBT](#data-transformation-with-dbt)**  
+   3.5 **[Orchestration with Airflow](#orchestration-with-airflow)**
 
 4. **[Deployment and Execution](#deployment-and-execution)**  
    4.1 **[Deploying the Data Pipeline](#deploying-the-data-pipeline)**  
@@ -89,6 +91,23 @@ ___
 * **Task Grouping**: Use Airflow’s task groups to manage DBT transformations for the silver and gold layers.
 
 ## Data Pipeline Explanation
+
+### Medallion Architecture in BigQuery
+
+The **Medallion Architecture** is a data architecture approach that organizes data into different layers (Bronze, Silver, and Gold), each with an increasing level of refinement and quality. In the context of BigQuery, we use this architecture to structure data as follows:
+
+- **Bronze Layer**: Raw and unprocessed data, loaded directly from the source using Airbyte.
+- **Silver Layer**: Cleaned and transformed data, prepared for analysis, using DBT to transform and organize the data.
+- **Gold Layer**: Highly refined data, ready for consumption by dashboards and business analytics.
+
+This architecture allows for better organization, governance, and scalability of the data, making it easier to trace and continually refine the data as it progresses through the different layers.
+
+### Git and GitHub for Version Control
+
+**Git** is a version control tool that allows developers to track changes in the code over time, revert to previous versions, and collaborate with other developers. **GitHub** is a Git-based platform that facilitates hosting repositories, collaboration, and code review, as well as providing tools for project management.
+
+In this project, we use Git to version all the data pipeline code, and GitHub to manage the repository, ensure collaboration, and maintain a clear history of changes over time. This ensures that the code is kept organized, traceable, and recoverable if needed.
+
 * **Source Data Ingestion with Airbyte**
     * Airbyte is responsible for syncing raw data from the Postgres database to the bronze layer in BigQuery.
     * Airbyte ensures that the data is reliably ingested, handling any necessary data type conversions.
