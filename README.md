@@ -6,8 +6,6 @@
 
 ## Documentation Index
 
-Aqui está o índice replicado para os outros tópicos:
-
 ---
 
 1. **[Project Overview](#project-overview)**  
