@@ -176,8 +176,11 @@ You will have to use your **service_account.json** in the **dbt_project.yml** fi
 * Configure the AIRFLOW_AIRBYTE_CONN_ID and CONN_ID in the Airflow Dag to connect with Airbyte.
 * The **Airbyte Connection** is the ID after **"connections/"** in Airbyte's URL
 
-![alt text](./images/dag_connections.png)
+![alt text](./images/airbyte_connection_id.png)
 
+```CONN_ID = "b4eebad7-7fa2-4a57-9b6f-f9ab44ae64e1" # Airbyte Connection```
+
+```AIRFLOW_AIRBYTE_CONN_ID = "airflow_airbyte_conn" # Airflow Connection to Airbyte```
 
 # DBT Configuration's Example
 
