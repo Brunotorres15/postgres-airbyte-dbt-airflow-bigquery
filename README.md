@@ -86,6 +86,7 @@
 * **Airbyte**: For data ingestion from Postgres to BigQuery.
 * **DBT (Data Build Tool)**: For transforming and structuring the data in BigQuery.
 * **Airflow**: For orchestrating the entire data pipeline, ensuring tasks are executed in the correct order.
+* **BigQuery**: As the data warehouse where the ingested and transformed data is stored and queried.
 * **Git/Github**: Versoning all the data pipeline code, and GitHub to manage the repository.
 ___
 
@@ -239,8 +240,12 @@ ___
 #### Serve the documentation locally
 ```dbt docs serve```
 
+#### it uses the port 8080 but since Airflow is using this port, you can point it to
+```dbt docs serve --port 8081```
+
 #### You can access it by going to
-```http://localhost:8080```
+```http://localhost:8081```
+
 
 # Documentation Results
 
@@ -281,13 +286,13 @@ ___
     - Run the following commands to initialize and deploy the infrastructure:
       ```bash
       terraform init
-      terraform apply -var-file=variables.tfvars
+      terraform apply -var-file variables.tfvars
       ```
 
 6. **Destroy the Infrastructure**:
     - When you're done, you can clean up the resources by running:
       ```bash
-      terraform destroy -var-file=variables.tfvars
+      terraform destroy -var-file variables.tfvars
       ```
 
 ## **Conclusion**
