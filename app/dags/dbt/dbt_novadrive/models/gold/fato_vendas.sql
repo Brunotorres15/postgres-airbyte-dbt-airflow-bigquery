@@ -1,4 +1,5 @@
 {{ config(materialized='incremental', unique_key='venda_id', schema='gold') }}
+--{{ config(materialized='table', unique_key='venda_id', schema='gold') }}
 WITH vendas AS (
     SELECT
         v.id_vendas AS venda_id,

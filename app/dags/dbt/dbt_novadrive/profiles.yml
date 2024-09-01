@@ -7,4 +7,4 @@ dbt_novadrive:
       project: # your gcp project
       dataset: novadrive
       threads: 2 # Must be a value of 1 or greater
-      keyfile: # Path to your gcp service_account.json
+      keyfile: /usr/local/airflow/dags/dbt/dbt_novadrive/gcp/service_account.json # Path to your gcp service_account.json

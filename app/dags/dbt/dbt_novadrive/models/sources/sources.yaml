@@ -13,8 +13,8 @@ sources:
         - name: bronze_fluxo
         - name: bronze_op_faturamento
         - name: bronze_veiculos
-        - name: bronze_vendas
         - name: bronze_vendedores 
+        - name: bronze_vendas
   
   - name: novadrive_silver
     database: # your gcp bigquery database 
@@ -28,5 +28,5 @@ sources:
         - name: silver_fluxo
         - name: silver_op_faturamento
         - name: silver_veiculos
-        - name: silver_vendas
-        - name: silver_vendedores 
+        - name: silver_vendedores
+        - name: silver_vendas 

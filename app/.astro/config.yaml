@@ -1,6 +1,6 @@
 airflow:
     expose_port: "true"
 project:
-    name: POSTGRES-AIRBYTE-DBT-AIRFLOW-BIGQUERY
+    name: postgres-airbyte-dbt-airflow-bigquery
 webserver:
     port: "8080"

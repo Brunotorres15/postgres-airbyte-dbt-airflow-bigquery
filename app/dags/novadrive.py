@@ -9,8 +9,8 @@ from cosmos import DbtTaskGroup, LoadMode, RenderConfig
 
 from pendulum import datetime
 
-CONN_ID = "<sync-airbyte-connection>" # local airbyte connection
-AIRFLOW_AIRBYTE_CONN_ID = "airflow_airbyte_conn"
+CONN_ID = "b4eebad7-7fa2-4a57-9b6f-f9ab44ae64e1" # Airbyte Connection
+AIRFLOW_AIRBYTE_CONN_ID = "airflow_airbyte_conn" # Airflow Connection to Airbyte
 
 
 @dag(
