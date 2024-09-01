@@ -283,7 +283,7 @@ ___
       ```
 
 5. **Initialize and Apply Terraform**:
-    - Run the following commands to initialize and deploy the infrastructure:
+    - Got to the `infra` folder and run the following commands to initialize and deploy the infrastructure:
       ```bash
       terraform init
       terraform apply -var-file variables.tfvars
