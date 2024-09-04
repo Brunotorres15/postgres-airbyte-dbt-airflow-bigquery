@@ -38,7 +38,7 @@
 
 6. **[DBT Documentation](#dbt-documentation)**  
    6.1 **[How It Works](#how-it-works)**  
-   6.2 **[How to Generate Documentation](#how-to-generate-documentation)**  
+   6.2 **[How to Generate The Documentation](#how-to-generate-the-documentation)**  
    6.3 **[Documentation Results](#documentation-results)**  
 
 7. **[Infrastructure Deployment (Bonus)](#infrastructure-deployment-bonus)**  
@@ -235,7 +235,9 @@ You should get something like this:
 
 This approach ensures that documentation remains current and useful, facilitating better data management and collaboration.
 ___
-### How to generate it
+### How to Generate The Documentation
+
+Go to the `dags/dbt/dbt_novadrive/` folder
 
 #### Generate the documentation files
 ```dbt docs generate```
